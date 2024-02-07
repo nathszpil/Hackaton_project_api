@@ -44,4 +44,4 @@ def add_one():
 
 
 if __name__ == '__main__':
-    app.run(host='16.171.41.176', port=8080)  # Run on localhost, port 8080
+    app.run(host='localhost', port=8080)  # Run on localhost, port 8080
