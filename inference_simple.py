@@ -17,7 +17,7 @@ def cosine_similarity_score(ID1, ID2, df):
     features2 = row2.drop('STUDENT ID').values.reshape(1, -1)
 
     # Calculate cosine similarity
-    score = cosine_similarity(features1, features2)[0][0]
+    score = cosine_similarity(features1, features2)[0][0] * 100
 
     return score
 
@@ -44,4 +44,4 @@ def add_one():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)  # Run on localhost, port 8080
+    app.run(host='0.0.0.0', port=8080)

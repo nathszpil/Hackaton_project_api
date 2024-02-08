@@ -2,8 +2,8 @@ import requests
 
 
 def main():
-    url = 'http://localhost:8080/get_ids_scores'  # URL of the Flask server
-    ids = [1, 22, 33, 44, 55, 66, 77, 88, 99, 100]  # Example list of IDs
+    url = 'http://16.171.41.176:8080/get_ids_scores'  # URL of the Flask server
+    ids = [1, 22, 33, 44, 55, 66, 77, 88, 99, 100, 145]  # Example list of IDs
 
     response = requests.post(url, json={'ids': ids})
 
