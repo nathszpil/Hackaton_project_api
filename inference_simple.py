@@ -18,6 +18,7 @@ def cosine_similarity_score(ID1, ID2, df):
 
     # Calculate cosine similarity
     score = cosine_similarity(features1, features2)[0][0] * 100
+    score = round(score, 1)
 
     return score
 

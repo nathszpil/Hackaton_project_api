@@ -3,6 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 df = pd.read_csv("students_data.csv")
+
 weights = {
     'Student Age': 2,
     'Sex': 2,
@@ -20,6 +21,7 @@ weights = {
     'Discussion improves my interest and success in the course': 3
 }
 
+
 def cosine_similarity_score(ID1, ID2, df):
     # Locate the rows corresponding to ID1 and ID2
     row1 = df[df['STUDENT ID'] == ID1].iloc[0]
@@ -33,6 +35,7 @@ def cosine_similarity_score(ID1, ID2, df):
     score = cosine_similarity(features1, features2)[0][0]
 
     return score
+
 
 def weighted_cosine_similarity_score(ID1, ID2, df, weights):
     # Locate the rows corresponding to ID1 and ID2
@@ -58,6 +61,3 @@ print('score with 147 : ', cosine_similarity_score(1, 147, df))
 
 print('w score with 146 : ', weighted_cosine_similarity_score(1, 146, df, weights))
 print('wscore with 147 : ', weighted_cosine_similarity_score(1, 147, df, weights))
-
-
-
