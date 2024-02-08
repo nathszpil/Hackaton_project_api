@@ -41,7 +41,6 @@ def add_one():
     if ids is None:
         return jsonify({'error': 'No IDs provided'}), 400
     ids, scores = get_scores(ids)
-    ids[0] = 'hey Ilia'
     return jsonify({'ids': ids, 'scores': scores})
 
 
